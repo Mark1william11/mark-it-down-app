@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1095160567129",
+    "project_id": "mark-it-down-76d9d",
+    "storage_bucket": "mark-it-down-76d9d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095160567129:android:9e04f866a0e2b886c6a848",
+        "android_client_info": {
+          "package_name": "com.example.mark_it_down_v2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9EOddQTxl2G3LwGcZEPTu1Io1TMh7eNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095160567129:android:d807aa7a7549208dc6a848",
+        "android_client_info": {
+          "package_name": "com.markwilliam.markitdown"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9EOddQTxl2G3LwGcZEPTu1Io1TMh7eNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
