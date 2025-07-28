@@ -12,9 +12,9 @@ Mark It Down is a beautiful, feature-rich, and modern To-Do application built wi
 
 | Light Mode | Dark Mode |
 | :---: | :---: |
-| ![Light Mode Screenshot 1](https-your-image-link-here) | ![Dark Mode Screenshot 1](https-your-image-link-here) |
+| ![Light Mode Screenshot 1](<img width="1080" height="2400" alt="Screenshot_1753722695" src="https://github.com/user-attachments/assets/ec820b87-894f-4ae6-936f-35faaeb1057a" />) | ![Dark Mode Screenshot 1](<img width="1080" height="2400" alt="Screenshot_1753722795" src="https://github.com/user-attachments/assets/7b3c73cd-4db3-41d1-917a-cd38fe99db01" />) |
 | *Login Screen* | *Home Screen (Dark)* |
-| ![Light Mode Screenshot 2](https-your-image-link-here) | ![Dark Mode Screenshot 2](https-your-image-link-here) |
+| ![Light Mode Screenshot 2](<img width="1080" height="2400" alt="Screenshot_1753723151" src="https://github.com/user-attachments/assets/7a2f7210-b843-43b7-903f-ba4647391028" />) | ![Dark Mode Screenshot 2](<img width="1080" height="2400" alt="Screenshot_1753723280" src="https://github.com/user-attachments/assets/cc36fd19-27a1-4d89-bf1b-052bae9ec652" />) |
 | *Stats Screen* | *Focus Mode* |
 
 **Video Demo:**
