@@ -15,12 +15,6 @@ Mark It Down is a beautiful, feature-rich, and modern To-Do application built wi
 | ![Light Mode Screenshot 2](https://github.com/user-attachments/assets/7a2f7210-b843-43b7-903f-ba4647391028)                                | ![Dark Mode Screenshot 2](https://github.com/user-attachments/assets/cc36fd19-27a1-4d89-bf1b-052bae9ec652)                                 |
 | *Stats Screen*                                                                                                                           | *Focus Mode*                                                                                                                             |
 
-**Video Demo:**
-
-*Replace this line with your embedded GIF or a link to a video!*
-
----
-
 ## ✨ Features
 
 *   **Full User Authentication:** Secure sign-up and login using Firebase Authentication.
