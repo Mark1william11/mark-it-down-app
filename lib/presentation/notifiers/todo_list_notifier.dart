@@ -131,17 +131,19 @@ class TodoList extends _$TodoList {
     });
   }
 
-  Future<void> remove(int id) async {
-    final previousState = state;
-    final oldTodos = previousState.valueOrNull;
-    if (oldTodos == null) return;
-    state = AsyncData(oldTodos.where((todo) => todo.id != id).toList());
+  void remove(int id) {
+    // whenData is a safe way to update the state if it has data.
+    state = state.whenData((todos) => todos.where((todo) => todo.id != id).toList());
+  }
 
-    try {
-      await _service.deleteTodo(id);
-    } catch (e) {
-      state = previousState;
-    }
+  void undoDelete(model.Todo todo) {
+    state = state.whenData((todos) {
+      // Add the todo back and sort the list to maintain order.
+      // You can replace this with your preferred sorting logic.
+      final newList = [...todos, todo];
+      newList.sort((a, b) => b.createdAt.compareTo(a.createdAt));
+      return newList;
+    });
   }
 
   Future<void> refresh() async {

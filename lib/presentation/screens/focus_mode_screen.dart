@@ -104,10 +104,10 @@ class _FocusModeScreenState extends ConsumerState<FocusModeScreen> {
                 strokeCap: StrokeCap.round,
                 textStyle: theme.textTheme.displayLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                 textFormat: CountdownTextFormat.MM_SS,
-                isReverse: true, // This makes numbers count 25:00 -> 00:00. Correct.
+                isReverse: true,
                 
                 // THE FIX: This makes the ring DRAIN instead of FILL.
-                isReverseAnimation: false, 
+                isReverseAnimation: true,
                 
                 isTimerTextShown: true,
                 autoStart: true,

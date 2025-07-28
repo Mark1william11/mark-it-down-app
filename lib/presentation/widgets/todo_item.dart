@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mark_it_down_v2/logic/todo_service.dart';
 import 'package:mark_it_down_v2/routing/app_router.dart';
 
 import '../../data/models/todo.dart';
@@ -46,13 +47,29 @@ class _TodoItemState extends ConsumerState<TodoItem> {
         key: ValueKey(todo.id),
         direction: DismissDirection.endToStart,
         onDismissed: (direction) {
-          ref.read(todoListProvider.notifier).remove(todo.id);
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: const Text('Todo deleted'),
-              action: SnackBarAction(label: 'Undo', onPressed: () => ref.read(todoListProvider.notifier).refresh()),
-            ),
-          );
+          final notifier = ref.read(todoListProvider.notifier);
+          notifier.remove(todo.id);
+          ScaffoldMessenger.of(context)
+              .showSnackBar(
+                SnackBar(
+                  content: const Text('Todo deleted'),
+                  duration: const Duration(seconds: 4),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      notifier.undoDelete(todo);
+                    },
+                  ),
+                ),
+              )
+              .closed
+              .then((reason) {
+            // 3. If the SnackBar was dismissed for any reason OTHER than pressing the "Undo" action...
+            if (reason != SnackBarClosedReason.action) {
+              // ...then, and ONLY then, permanently delete the todo from the database and cloud.
+              ref.read(todoServiceProvider).deleteTodo(todo.id);
+            }
+          });
         },
         background: Container(
           color: Colors.red,
