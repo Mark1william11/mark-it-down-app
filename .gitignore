@@ -52,3 +52,6 @@ app.*.map.json
 firebase_options.
 
 lib/firebase_options.dart
+# Ignore generated files
+*.g.dart
+*.freezed.dart
